@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B43CE87CFB8AF33CF18DB9 /* libPods-Xib-AutoLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB5E302169DC5C7721D891 /* libPods-Xib-AutoLayout.a */; };
 		76910EE81E64390300205F0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76910EE71E64390300205F0B /* main.m */; };
 		76910EEB1E64390300205F0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76910EEA1E64390300205F0B /* AppDelegate.m */; };
 		76910EEE1E64390300205F0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76910EED1E64390300205F0B /* ViewController.m */; };
 		76910EF11E64390300205F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76910EEF1E64390300205F0B /* Main.storyboard */; };
 		76910EF31E64390300205F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76910EF21E64390300205F0B /* Assets.xcassets */; };
 		76910EF61E64390300205F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76910EF41E64390300205F0B /* LaunchScreen.storyboard */; };
+		76910F041E65658600205F0B /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76910F021E65658600205F0B /* Cell.m */; };
+		76910F051E65658600205F0B /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76910F031E65658600205F0B /* Cell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		694387605F601A1F5669C9B9 /* Pods-Xib-AutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xib-AutoLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Xib-AutoLayout/Pods-Xib-AutoLayout.release.xcconfig"; sourceTree = "<group>"; };
 		76910EE31E64390300205F0B /* Xib-AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xib-AutoLayout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76910EE71E64390300205F0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76910EE91E64390300205F0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +30,11 @@
 		76910EF21E64390300205F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76910EF51E64390300205F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76910EF71E64390300205F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76910F011E65658600205F0B /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		76910F021E65658600205F0B /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		76910F031E65658600205F0B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		9445F9206CA3DA520F1AD20F /* Pods-Xib-AutoLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xib-AutoLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Xib-AutoLayout/Pods-Xib-AutoLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		CADB5E302169DC5C7721D891 /* libPods-Xib-AutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Xib-AutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B43CE87CFB8AF33CF18DB9 /* libPods-Xib-AutoLayout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,8 @@
 			children = (
 				76910EE51E64390300205F0B /* Xib-AutoLayout */,
 				76910EE41E64390300205F0B /* Products */,
+				CA783C20B3BEDAF38236485B /* Pods */,
+				D9036CFB4F26EE1FFAAD2B53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +79,9 @@
 				76910EF41E64390300205F0B /* LaunchScreen.storyboard */,
 				76910EF71E64390300205F0B /* Info.plist */,
 				76910EE61E64390300205F0B /* Supporting Files */,
+				76910F011E65658600205F0B /* Cell.h */,
+				76910F021E65658600205F0B /* Cell.m */,
+				76910F031E65658600205F0B /* Cell.xib */,
 			);
 			path = "Xib-AutoLayout";
 			sourceTree = "<group>";
@@ -79,6 +94,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CA783C20B3BEDAF38236485B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9445F9206CA3DA520F1AD20F /* Pods-Xib-AutoLayout.debug.xcconfig */,
+				694387605F601A1F5669C9B9 /* Pods-Xib-AutoLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9036CFB4F26EE1FFAAD2B53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CADB5E302169DC5C7721D891 /* libPods-Xib-AutoLayout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76910EFA1E64390300205F0B /* Build configuration list for PBXNativeTarget "Xib-AutoLayout" */;
 			buildPhases = (
+				5A91CAFD6B5FC9AC41D6606D /* [CP] Check Pods Manifest.lock */,
 				76910EDF1E64390300205F0B /* Sources */,
 				76910EE01E64390300205F0B /* Frameworks */,
 				76910EE11E64390300205F0B /* Resources */,
+				9DD8637AE1360E62D4179027 /* [CP] Embed Pods Frameworks */,
+				80CCAE46DCA7F4AF965B3040 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76910EF61E64390300205F0B /* LaunchScreen.storyboard in Resources */,
+				76910F051E65658600205F0B /* Cell.xib in Resources */,
 				76910EF31E64390300205F0B /* Assets.xcassets in Resources */,
 				76910EF11E64390300205F0B /* Main.storyboard in Resources */,
 			);
@@ -145,12 +181,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A91CAFD6B5FC9AC41D6606D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80CCAE46DCA7F4AF965B3040 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Xib-AutoLayout/Pods-Xib-AutoLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DD8637AE1360E62D4179027 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Xib-AutoLayout/Pods-Xib-AutoLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76910EDF1E64390300205F0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				76910EEE1E64390300205F0B /* ViewController.m in Sources */,
+				76910F041E65658600205F0B /* Cell.m in Sources */,
 				76910EEB1E64390300205F0B /* AppDelegate.m in Sources */,
 				76910EE81E64390300205F0B /* main.m in Sources */,
 			);
@@ -268,6 +353,7 @@
 		};
 		76910EFB1E64390300205F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9445F9206CA3DA520F1AD20F /* Pods-Xib-AutoLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Xib-AutoLayout/Info.plist";
@@ -279,6 +365,7 @@
 		};
 		76910EFC1E64390300205F0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694387605F601A1F5669C9B9 /* Pods-Xib-AutoLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Xib-AutoLayout/Info.plist";
@@ -307,6 +394,7 @@
 				76910EFC1E64390300205F0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
