@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3173A7BD4C0F8A521983555E /* Pods_AutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1252CB9267B342A4E6B55F /* Pods_AutoLayout.framework */; };
+		B427032520A5860D0052C5A8 /* AutoImageSize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B427032420A5860D0052C5A8 /* AutoImageSize.storyboard */; };
+		B427032720A586260052C5A8 /* WZAutoImageSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427032620A586260052C5A8 /* WZAutoImageSizeViewController.swift */; };
+		B427032920A58A440052C5A8 /* WZImageSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427032820A58A440052C5A8 /* WZImageSizeCell.swift */; };
 		B4390DAC20A5489700E11123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DAB20A5489700E11123 /* AppDelegate.swift */; };
-		B4390DAE20A5489700E11123 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DAD20A5489700E11123 /* ViewController.swift */; };
 		B4390DB120A5489700E11123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4390DAF20A5489700E11123 /* Main.storyboard */; };
 		B4390DB320A5489900E11123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4390DB220A5489900E11123 /* Assets.xcassets */; };
 		B4390DB620A5489900E11123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4390DB420A5489900E11123 /* LaunchScreen.storyboard */; };
@@ -18,15 +20,22 @@
 		B4390DCB20A55F6900E11123 /* BYLoadingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DC720A55F6800E11123 /* BYLoadingTool.swift */; };
 		B4390DCC20A55F6900E11123 /* BYTopImageBottomTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DC820A55F6800E11123 /* BYTopImageBottomTitleButton.swift */; };
 		B4390DCD20A55F6900E11123 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DC920A55F6900E11123 /* Common.swift */; };
+		B48E3E6A20A564D1009EBB16 /* WZTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6920A564D1009EBB16 /* WZTabBarController.swift */; };
+		B48E3E6C20A564F0009EBB16 /* WZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6B20A564F0009EBB16 /* WZNavigationController.swift */; };
+		B48E3E6E20A56550009EBB16 /* WZListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6D20A56550009EBB16 /* WZListViewController.swift */; };
+		B48E3E7020A5655A009EBB16 /* WZMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6F20A5655A009EBB16 /* WZMeViewController.swift */; };
+		B48E3E7420A57A12009EBB16 /* WZMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E7320A57A12009EBB16 /* WZMeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16F9631FA0C2D3DA5BD8170C /* Pods-AutoLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoLayout/Pods-AutoLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		1B1252CB9267B342A4E6B55F /* Pods_AutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39454D311C4478F757B841C6 /* Pods-AutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoLayout/Pods-AutoLayout.release.xcconfig"; sourceTree = "<group>"; };
+		B427032420A5860D0052C5A8 /* AutoImageSize.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoImageSize.storyboard; sourceTree = "<group>"; };
+		B427032620A586260052C5A8 /* WZAutoImageSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZAutoImageSizeViewController.swift; sourceTree = "<group>"; };
+		B427032820A58A440052C5A8 /* WZImageSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZImageSizeCell.swift; sourceTree = "<group>"; };
 		B4390DA820A5489700E11123 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4390DAB20A5489700E11123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4390DAD20A5489700E11123 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4390DB020A5489700E11123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4390DB220A5489900E11123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4390DB520A5489900E11123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +46,11 @@
 		B4390DC820A55F6800E11123 /* BYTopImageBottomTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYTopImageBottomTitleButton.swift; sourceTree = "<group>"; };
 		B4390DC920A55F6900E11123 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B4390DCE20A5623C00E11123 /* BridgeFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeFile.h; sourceTree = "<group>"; };
+		B48E3E6920A564D1009EBB16 /* WZTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZTabBarController.swift; sourceTree = "<group>"; };
+		B48E3E6B20A564F0009EBB16 /* WZNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNavigationController.swift; sourceTree = "<group>"; };
+		B48E3E6D20A56550009EBB16 /* WZListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZListViewController.swift; sourceTree = "<group>"; };
+		B48E3E6F20A5655A009EBB16 /* WZMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZMeViewController.swift; sourceTree = "<group>"; };
+		B48E3E7320A57A12009EBB16 /* WZMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZMeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B427031F20A585A90052C5A8 /* ImageAutoSize */ = {
+			isa = PBXGroup;
+			children = (
+				B427032120A585C80052C5A8 /* Controller */,
+				B427032020A585C00052C5A8 /* Views */,
+			);
+			path = ImageAutoSize;
+			sourceTree = "<group>";
+		};
+		B427032020A585C00052C5A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B427032820A58A440052C5A8 /* WZImageSizeCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B427032120A585C80052C5A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B427032420A5860D0052C5A8 /* AutoImageSize.storyboard */,
+				B427032620A586260052C5A8 /* WZAutoImageSizeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B4390D9F20A5489700E11123 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				B4390DAB20A5489700E11123 /* AppDelegate.swift */,
-				B4390DAF20A5489700E11123 /* Main.storyboard */,
 				B4390DB220A5489900E11123 /* Assets.xcassets */,
 				B4390DB420A5489900E11123 /* LaunchScreen.storyboard */,
 			);
@@ -94,7 +133,8 @@
 		B4390DBE20A549C100E11123 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				B4390DAD20A5489700E11123 /* ViewController.swift */,
+				B427031F20A585A90052C5A8 /* ImageAutoSize */,
+				B48E3E6820A564AE009EBB16 /* Main */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -110,6 +150,35 @@
 				B4390DCE20A5623C00E11123 /* BridgeFile.h */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		B48E3E6820A564AE009EBB16 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B48E3E7220A579CC009EBB16 /* Views */,
+				B48E3E7120A579AF009EBB16 /* Controllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B48E3E7120A579AF009EBB16 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4390DAF20A5489700E11123 /* Main.storyboard */,
+				B48E3E6920A564D1009EBB16 /* WZTabBarController.swift */,
+				B48E3E6B20A564F0009EBB16 /* WZNavigationController.swift */,
+				B48E3E6D20A56550009EBB16 /* WZListViewController.swift */,
+				B48E3E6F20A5655A009EBB16 /* WZMeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B48E3E7220A579CC009EBB16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B48E3E7320A57A12009EBB16 /* WZMeCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C29EFF41D335A7F98BEEED42 /* Frameworks */ = {
@@ -157,6 +226,7 @@
 		B4390DA020A5489700E11123 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WZ;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = arther;
@@ -191,6 +261,7 @@
 			files = (
 				B4390DB620A5489900E11123 /* LaunchScreen.storyboard in Resources */,
 				B4390DB320A5489900E11123 /* Assets.xcassets in Resources */,
+				B427032520A5860D0052C5A8 /* AutoImageSize.storyboard in Resources */,
 				B4390DB120A5489700E11123 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,10 +322,16 @@
 			files = (
 				B4390DCB20A55F6900E11123 /* BYLoadingTool.swift in Sources */,
 				B4390DCA20A55F6900E11123 /* BYNetRequest.swift in Sources */,
-				B4390DAE20A5489700E11123 /* ViewController.swift in Sources */,
+				B48E3E7420A57A12009EBB16 /* WZMeCell.swift in Sources */,
 				B4390DAC20A5489700E11123 /* AppDelegate.swift in Sources */,
+				B48E3E7020A5655A009EBB16 /* WZMeViewController.swift in Sources */,
+				B48E3E6A20A564D1009EBB16 /* WZTabBarController.swift in Sources */,
+				B48E3E6E20A56550009EBB16 /* WZListViewController.swift in Sources */,
 				B4390DCC20A55F6900E11123 /* BYTopImageBottomTitleButton.swift in Sources */,
 				B4390DC420A55F4200E11123 /* Category.swift in Sources */,
+				B427032920A58A440052C5A8 /* WZImageSizeCell.swift in Sources */,
+				B427032720A586260052C5A8 /* WZAutoImageSizeViewController.swift in Sources */,
+				B48E3E6C20A564F0009EBB16 /* WZNavigationController.swift in Sources */,
 				B4390DCD20A55F6900E11123 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +478,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X293M59WA5;
 				INFOPLIST_FILE = AutoLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +489,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AutoLayout/Tools/BridgeFile.h;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,7 +499,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X293M59WA5;
 				INFOPLIST_FILE = AutoLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AutoLayout/Tools/BridgeFile.h;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
