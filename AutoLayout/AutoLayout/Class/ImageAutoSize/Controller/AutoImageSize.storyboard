@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--视图-->
+        <!--图片适应大小-->
         <scene sceneID="fe6-2Q-tVP">
             <objects>
-                <viewController title="视图" id="ihc-9a-kQx" customClass="WZAutoImageSizeViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="图片适应大小" id="ihc-9a-kQx" customClass="WZAutoImageSizeViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nS3-Ce-Ua7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
