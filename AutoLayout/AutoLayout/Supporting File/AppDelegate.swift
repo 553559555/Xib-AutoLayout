@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        #if DEBUG
+            let FPSLabel = V2FPSLabel(frame: CGRect(x: 100, y: 100, width: 50, height: 30))
+            self.window?.addSubview(FPSLabel)
+        #else
+        #endif
+        
+        
         return true
     }
 

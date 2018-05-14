@@ -20,6 +20,7 @@
 		B4390DCB20A55F6900E11123 /* BYLoadingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DC720A55F6800E11123 /* BYLoadingTool.swift */; };
 		B4390DCC20A55F6900E11123 /* BYTopImageBottomTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DC820A55F6800E11123 /* BYTopImageBottomTitleButton.swift */; };
 		B4390DCD20A55F6900E11123 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390DC920A55F6900E11123 /* Common.swift */; };
+		B471496E20A962E600FDD601 /* V2FPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471496D20A962E600FDD601 /* V2FPSLabel.swift */; };
 		B48E3E6A20A564D1009EBB16 /* WZTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6920A564D1009EBB16 /* WZTabBarController.swift */; };
 		B48E3E6C20A564F0009EBB16 /* WZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6B20A564F0009EBB16 /* WZNavigationController.swift */; };
 		B48E3E6E20A56550009EBB16 /* WZListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6D20A56550009EBB16 /* WZListViewController.swift */; };
@@ -46,6 +47,7 @@
 		B4390DC820A55F6800E11123 /* BYTopImageBottomTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYTopImageBottomTitleButton.swift; sourceTree = "<group>"; };
 		B4390DC920A55F6900E11123 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B4390DCE20A5623C00E11123 /* BridgeFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeFile.h; sourceTree = "<group>"; };
+		B471496D20A962E600FDD601 /* V2FPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2FPSLabel.swift; sourceTree = "<group>"; };
 		B48E3E6920A564D1009EBB16 /* WZTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZTabBarController.swift; sourceTree = "<group>"; };
 		B48E3E6B20A564F0009EBB16 /* WZNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNavigationController.swift; sourceTree = "<group>"; };
 		B48E3E6D20A56550009EBB16 /* WZListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZListViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		B4390DC520A55F4500E11123 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B471496D20A962E600FDD601 /* V2FPSLabel.swift */,
 				B4390DC720A55F6800E11123 /* BYLoadingTool.swift */,
 				B4390DC620A55F6800E11123 /* BYNetRequest.swift */,
 				B4390DC820A55F6800E11123 /* BYTopImageBottomTitleButton.swift */,
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B471496E20A962E600FDD601 /* V2FPSLabel.swift in Sources */,
 				B4390DCB20A55F6900E11123 /* BYLoadingTool.swift in Sources */,
 				B4390DCA20A55F6900E11123 /* BYNetRequest.swift in Sources */,
 				B48E3E7420A57A12009EBB16 /* WZMeCell.swift in Sources */,
