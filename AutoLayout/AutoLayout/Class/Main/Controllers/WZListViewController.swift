@@ -10,7 +10,7 @@ import UIKit
 
 class WZListViewController: UIViewController {
     
-    private var listArray: [String] = ["图片自己适应大小","高度自适应","啦啦","拉拉拉"]
+    private var listArray: [String] = ["图片自己适应大小","微博","啦啦","拉拉拉"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,10 @@ extension WZListViewController:UITableViewDelegate {
         case 0:
             let autoImageSizeVC = UIStoryboard(name: "AutoImageSize", bundle: nil).instantiateInitialViewController()
             self.navigationController?.pushViewController(autoImageSizeVC!, animated: true)
+            self.hidesBottomBarWhenPushed = false;
+        case 1:
+            let sinaVC = UIStoryboard(name: "Sina", bundle: nil).instantiateInitialViewController()
+            self.navigationController?.pushViewController(sinaVC!, animated: true)
             self.hidesBottomBarWhenPushed = false;
         default:
             print("No VC found to jump")
