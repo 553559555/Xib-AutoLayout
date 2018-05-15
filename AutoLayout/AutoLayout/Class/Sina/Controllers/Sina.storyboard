@@ -15,7 +15,6 @@
         <!--Snia View Controller-->
         <scene sceneID="9TU-TU-TTB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WSw-XL-IPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Lws-4Q-I8R" customClass="WZSniaViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mwd-y4-D1S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -44,7 +43,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vip" translatesAutoresizingMaskIntoConstraints="NO" id="hh4-u8-YfO">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vip" translatesAutoresizingMaskIntoConstraints="NO" id="hh4-u8-YfO">
                                                     <rect key="frame" x="60" y="51" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="4xZ-7x-4Zy"/>
@@ -52,7 +51,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="10"/>
+                                                            <real key="value" value="0.0"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -200,13 +199,14 @@
                         <viewLayoutGuide key="safeArea" id="Ah6-xQ-Ldq"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSw-XL-IPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228" y="68.815592203898049"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Vip" width="16" height="16"/>
         <image name="add" width="16" height="16"/>
         <image name="icon" width="1200" height="1200"/>
+        <image name="vip" width="32" height="32"/>
     </resources>
 </document>
