@@ -96,9 +96,6 @@
                                                     <color key="textColor" red="0.22327756851457703" green="0.22327756851457703" blue="0.22327756851457703" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFT-GG-lAg">
-                                                    <rect key="frame" x="30" y="109.66666666666666" width="354" height="409.33333333333337"/>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7XW-ru-7tQ">
                                                     <rect key="frame" x="30" y="535" width="354" height="25"/>
                                                     <subviews>
@@ -147,9 +144,47 @@
                                                         <constraint firstAttribute="height" constant="10" id="Dcs-K7-64w"/>
                                                     </constraints>
                                                 </view>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FCA-Rq-lZZ">
+                                                    <rect key="frame" x="30" y="109" width="354" height="410"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CU6-d1-OlB">
+                                                        <size key="itemSize" width="100" height="100"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="imageCollectionCell" id="fQ3-hG-oDp" customClass="WZImageCollectionViewCell" customModule="AutoLayout" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yLO-y5-yPk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="yLO-y5-yPk" firstAttribute="leading" secondItem="fQ3-hG-oDp" secondAttribute="leading" id="8m3-Ni-AVB"/>
+                                                                <constraint firstItem="yLO-y5-yPk" firstAttribute="top" secondItem="fQ3-hG-oDp" secondAttribute="top" id="cwh-z5-6TW"/>
+                                                                <constraint firstAttribute="bottom" secondItem="yLO-y5-yPk" secondAttribute="bottom" id="gAz-YO-Ymx"/>
+                                                                <constraint firstAttribute="trailing" secondItem="yLO-y5-yPk" secondAttribute="trailing" id="ubo-Sh-MmE"/>
+                                                            </constraints>
+                                                            <size key="customSize" width="100" height="100"/>
+                                                            <connections>
+                                                                <outlet property="backgroundImage" destination="yLO-y5-yPk" id="sQd-CP-wYf"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="LtE-0H-Anb" id="BEa-R2-1bJ"/>
+                                                        <outlet property="delegate" destination="LtE-0H-Anb" id="ydu-VD-zsn"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tHH-vR-9Dt" firstAttribute="top" secondItem="RFT-GG-lAg" secondAttribute="bottom" constant="10" id="0lN-fJ-WRy"/>
                                                 <constraint firstItem="7XW-ru-7tQ" firstAttribute="top" secondItem="tHH-vR-9Dt" secondAttribute="bottom" constant="5" id="10b-5I-o4f"/>
                                                 <constraint firstItem="LBV-pS-Vfy" firstAttribute="centerY" secondItem="HXs-06-jBd" secondAttribute="centerY" id="2Vg-GP-uxI"/>
                                                 <constraint firstItem="hh4-u8-YfO" firstAttribute="trailing" secondItem="GRL-K9-1Ib" secondAttribute="trailing" id="3oe-sM-kMM"/>
@@ -157,12 +192,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="LBV-pS-Vfy" secondAttribute="trailing" constant="10" id="D3M-6n-jtx"/>
                                                 <constraint firstItem="GRL-K9-1Ib" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leadingMargin" constant="10" id="GlS-mt-Nx2"/>
                                                 <constraint firstItem="HXs-06-jBd" firstAttribute="height" secondItem="GRL-K9-1Ib" secondAttribute="height" id="H0H-NA-Ugg"/>
-                                                <constraint firstItem="RFT-GG-lAg" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leadingMargin" constant="10" id="I99-cf-QZX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RFT-GG-lAg" secondAttribute="trailing" constant="10" id="Ma4-ea-iBq"/>
+                                                <constraint firstItem="FCA-Rq-lZZ" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leadingMargin" constant="10" id="KyP-R8-OfJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="2Aa-8v-3ig" secondAttribute="trailing" id="QQC-8K-RBl"/>
-                                                <constraint firstItem="RFT-GG-lAg" firstAttribute="top" secondItem="Vap-G9-fat" secondAttribute="bottom" constant="10" id="SJq-t9-V0B"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Vap-G9-fat" secondAttribute="trailing" constant="10" id="UoF-Vp-2Yj"/>
                                                 <constraint firstItem="tHH-vR-9Dt" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leadingMargin" constant="10" id="XCh-4t-fct"/>
+                                                <constraint firstItem="FCA-Rq-lZZ" firstAttribute="top" secondItem="Vap-G9-fat" secondAttribute="bottom" constant="10" id="YdP-G4-MQ0"/>
                                                 <constraint firstItem="7XW-ru-7tQ" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leadingMargin" constant="10" id="aSl-Tn-lNO"/>
                                                 <constraint firstItem="HXs-06-jBd" firstAttribute="top" secondItem="GRL-K9-1Ib" secondAttribute="top" id="bA7-5O-4qh"/>
                                                 <constraint firstItem="2Aa-8v-3ig" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leading" id="dQH-j0-EtG"/>
@@ -170,16 +204,18 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="7XW-ru-7tQ" secondAttribute="trailing" constant="10" id="mHo-6f-qPD"/>
                                                 <constraint firstItem="Vap-G9-fat" firstAttribute="leading" secondItem="Maf-Dv-aa5" secondAttribute="leadingMargin" constant="10" id="mbG-7o-wNh"/>
                                                 <constraint firstItem="HXs-06-jBd" firstAttribute="leading" secondItem="GRL-K9-1Ib" secondAttribute="trailing" constant="10" id="nC9-yj-Ck8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FCA-Rq-lZZ" secondAttribute="trailing" constant="10" id="ntd-uz-wRE"/>
                                                 <constraint firstItem="GRL-K9-1Ib" firstAttribute="top" secondItem="Maf-Dv-aa5" secondAttribute="topMargin" constant="10" id="rGg-Rj-kCH"/>
                                                 <constraint firstItem="Vap-G9-fat" firstAttribute="top" secondItem="GRL-K9-1Ib" secondAttribute="bottom" constant="10" id="sk3-Me-cux"/>
                                                 <constraint firstItem="2Aa-8v-3ig" firstAttribute="top" secondItem="7XW-ru-7tQ" secondAttribute="bottom" id="wAl-Xj-R5N"/>
                                                 <constraint firstItem="hh4-u8-YfO" firstAttribute="bottom" secondItem="GRL-K9-1Ib" secondAttribute="bottom" id="x0H-BU-EA4"/>
                                                 <constraint firstAttribute="bottom" secondItem="2Aa-8v-3ig" secondAttribute="bottom" id="yIs-4m-VH5"/>
+                                                <constraint firstItem="tHH-vR-9Dt" firstAttribute="top" secondItem="FCA-Rq-lZZ" secondAttribute="bottom" constant="10" id="yrc-kL-xOr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="collectionView" destination="FCA-Rq-lZZ" id="dKk-Lc-A6j"/>
                                             <outlet property="descLabel" destination="Vap-G9-fat" id="V3Q-qB-ZGN"/>
-                                            <outlet property="picImageView" destination="RFT-GG-lAg" id="PyI-8n-zAb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -201,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSw-XL-IPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="68.815592203898049"/>
+            <point key="canvasLocation" x="227.536231884058" y="68.478260869565219"/>
         </scene>
     </scenes>
     <resources>

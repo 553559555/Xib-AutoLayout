@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3173A7BD4C0F8A521983555E /* Pods_AutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1252CB9267B342A4E6B55F /* Pods_AutoLayout.framework */; };
+		7668997320AB298E00EAACED /* WZImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668997220AB298E00EAACED /* WZImageCollectionViewCell.swift */; };
 		B427032520A5860D0052C5A8 /* AutoImageSize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B427032420A5860D0052C5A8 /* AutoImageSize.storyboard */; };
 		B427032720A586260052C5A8 /* WZAutoImageSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427032620A586260052C5A8 /* WZAutoImageSizeViewController.swift */; };
 		B427032920A58A440052C5A8 /* WZImageSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427032820A58A440052C5A8 /* WZImageSizeCell.swift */; };
@@ -36,6 +37,7 @@
 		16F9631FA0C2D3DA5BD8170C /* Pods-AutoLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoLayout/Pods-AutoLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		1B1252CB9267B342A4E6B55F /* Pods_AutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39454D311C4478F757B841C6 /* Pods-AutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoLayout/Pods-AutoLayout.release.xcconfig"; sourceTree = "<group>"; };
+		7668997220AB298E00EAACED /* WZImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B427032420A5860D0052C5A8 /* AutoImageSize.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoImageSize.storyboard; sourceTree = "<group>"; };
 		B427032620A586260052C5A8 /* WZAutoImageSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZAutoImageSizeViewController.swift; sourceTree = "<group>"; };
 		B427032820A58A440052C5A8 /* WZImageSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZImageSizeCell.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				B471497E20A987D000FDD601 /* WZSniaCell.swift */,
+				7668997220AB298E00EAACED /* WZImageCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				B48E3E6E20A56550009EBB16 /* WZListViewController.swift in Sources */,
 				B4390DCC20A55F6900E11123 /* BYTopImageBottomTitleButton.swift in Sources */,
 				B4390DC420A55F4200E11123 /* Category.swift in Sources */,
+				7668997320AB298E00EAACED /* WZImageCollectionViewCell.swift in Sources */,
 				B427032920A58A440052C5A8 /* WZImageSizeCell.swift in Sources */,
 				B471497A20A9852400FDD601 /* AddStroyboardProperty.swift in Sources */,
 				B427032720A586260052C5A8 /* WZAutoImageSizeViewController.swift in Sources */,

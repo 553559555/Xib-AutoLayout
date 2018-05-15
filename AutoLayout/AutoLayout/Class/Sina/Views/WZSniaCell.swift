@@ -12,20 +12,13 @@ import Kingfisher
 class WZSniaCell: UITableViewCell {
 
     typealias reloadCellClosure = (_ index: NSInteger) -> ()
-    @IBOutlet weak var picImageView: UIImageView!
     @IBOutlet weak var descLabel: UILabel!
     private var reloadCell: reloadCellClosure?
     public var currentIndex: NSInteger!
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     public var dict: [String:String]? {
         didSet {
             descLabel.text = dict!["title"]
-            picImageView.kf.setImage(with: URL(string: dict!["pic"]!), placeholder: nil, options: nil, progressBlock: nil) { (image, error, type, imageURL) in
-                print("iamge = \(String(describing: image)) error = \(String(describing: error)) type = \(type) imageURL = \(String(describing: imageURL))")
-                if self.reloadCell != nil {
-                    self.reloadCell!(self.currentIndex)
-                }
-            }
         }
     }
     
@@ -35,7 +28,7 @@ class WZSniaCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,4 +37,30 @@ class WZSniaCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension WZSniaCell: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionCell", for: indexPath) as! WZImageCollectionViewCell
+        cell.imageStr = dict!["pic"]
+        cell.currentIndex = indexPath.row
+        cell.initWithClosure { (index) in
+            collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+            if self.reloadCell != nil {
+                self.reloadCell!(self.currentIndex)
+            }
+        }
+        return cell
+    }
+    
+    
+}
+
+extension WZSniaCell: UICollectionViewDelegate {
+    
 }

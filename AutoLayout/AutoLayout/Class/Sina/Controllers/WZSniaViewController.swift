@@ -41,9 +41,9 @@ extension WZSniaViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sinacell") as? WZSniaCell
         cell?.dict = sourceArray[indexPath.row]
         cell?.currentIndex = indexPath.row
-        cell?.initWithClosure { (index) in
-            tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
-        }
+//        cell?.initWithClosure { (index) in
+//            tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+//        }
         return cell!
     }
 }
