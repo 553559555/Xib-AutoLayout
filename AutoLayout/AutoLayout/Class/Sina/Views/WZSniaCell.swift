@@ -11,14 +11,33 @@ import Kingfisher
 
 class WZSniaCell: UITableViewCell {
 
+    private let itemWidth = (SCREEN_WIDTH - 60) / 3 - 20;
     typealias reloadCellClosure = (_ index: NSInteger) -> ()
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     private var reloadCell: reloadCellClosure?
     public var currentIndex: NSInteger!
-    @IBOutlet weak var collectionView: UICollectionView!
-    public var dict: [String:String]? {
+    private var flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+    
+    public var dict: [String:Any]! {
         didSet {
-            descLabel.text = dict!["title"]
+            descLabel.text = dict!["text"] as? String
+            if let images = dict!["pic_urls"] as? [[String: String]] {
+                switch images.count {
+                case 0:
+                    collectionViewHeight.constant = 0
+                case 1:
+                    collectionViewHeight.constant = itemWidth
+                case 2:
+                    collectionViewHeight.constant = itemWidth
+                default:
+                    let count = ceilf(Float(Float(images.count) / 3.0))
+                    collectionViewHeight.constant = 400
+                }
+                self.collectionView.layoutIfNeeded()
+            }
+            self.collectionView.reloadData()
         }
     }
     
@@ -36,29 +55,36 @@ class WZSniaCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
 
 extension WZSniaCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        if let array = dict!["pic_urls"] as? [[String: String]] {
+            return array.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionCell", for: indexPath) as! WZImageCollectionViewCell
-        cell.imageStr = dict!["pic"]
-        cell.currentIndex = indexPath.row
-        cell.initWithClosure { (index) in
-            collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
-            if self.reloadCell != nil {
-                self.reloadCell!(self.currentIndex)
-            }
+        if let imageArray = dict!["pic_urls"] as? [[String : String]] {
+            cell.dict = imageArray[indexPath.row]
         }
+        cell.currentIndex = indexPath.row
+        cell.backgroundColor = UIColor.red
         return cell
     }
     
     
+}
+
+extension WZMeCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = (SCREEN_WIDTH - 60) / 3 - 20;
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
 }
 
 extension WZSniaCell: UICollectionViewDelegate {

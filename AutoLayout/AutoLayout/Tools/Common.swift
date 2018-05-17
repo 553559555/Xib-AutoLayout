@@ -17,8 +17,8 @@ let HEIGHT_RATIO = (UIScreen.main.bounds.height / 1334.0)
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 //导航高度
-let NAVIGATION_HEIGHT = UIScreen.main.bounds.height == 812 ? 88 : 64
-let TABBAR_HEIGHT = UIScreen.main.bounds.height == 812 ? 1 : 49
+let NAVIGATION_HEIGHT = CGFloat(UIScreen.main.bounds.height == 812 ? 88.0 : 64.0)
+let TABBAR_HEIGHT = CGFloat(UIScreen.main.bounds.height == 812 ? 1.0 : 49.0)
 
 let GET_USER_TOKEN = "https://api.weibo.com/oauth2/authorize"
 let GET_ACCESS_TOKEN = "https://api.weibo.com/oauth2/access_token"

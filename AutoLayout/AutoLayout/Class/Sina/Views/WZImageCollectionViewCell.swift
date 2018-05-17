@@ -16,9 +16,9 @@ class WZImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backgroundImage: UIImageView!
     private var reloadCell: reloadCellClosure?
     public var currentIndex: NSInteger!
-    public var imageStr: String! {
+    public var dict: [String: String]! {
         didSet {
-            backgroundImage.kf.setImage(with: URL(string: imageStr), placeholder: nil, options: nil, progressBlock: nil) { (image, error, type, url) in
+            backgroundImage.kf.setImage(with: URL(string: dict["thumbnail_pic"]!), placeholder: nil, options: nil, progressBlock: nil) { (image, error, type, url) in
                 if self.reloadCell != nil {
                     self.reloadCell!(self.currentIndex)
                 }
