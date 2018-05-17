@@ -9,13 +9,14 @@
 import UIKit
 import Kingfisher
 
-class WZSniaCell: UITableViewCell {
+class WZSniaCell: UITableViewCell,UICollectionViewDelegateFlowLayout {
 
-    private let itemWidth = (SCREEN_WIDTH - 60) / 3 - 20;
+    private var itemWidth: CGFloat!
     typealias reloadCellClosure = (_ index: NSInteger) -> ()
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     private var reloadCell: reloadCellClosure?
     public var currentIndex: NSInteger!
     private var flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -28,12 +29,12 @@ class WZSniaCell: UITableViewCell {
                 case 0:
                     collectionViewHeight.constant = 0
                 case 1:
-                    collectionViewHeight.constant = itemWidth
+                    collectionViewHeight.constant = itemWidth + 15
                 case 2:
-                    collectionViewHeight.constant = itemWidth
+                    collectionViewHeight.constant = itemWidth + 15
                 default:
                     let count = ceilf(Float(Float(images.count) / 3.0))
-                    collectionViewHeight.constant = 400
+                    collectionViewHeight.constant = CGFloat(count) * itemWidth + (CGFloat(count) + 1) * 10
                 }
                 self.collectionView.layoutIfNeeded()
             }
@@ -48,14 +49,24 @@ class WZSniaCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        itemWidth = (collectionView.bounds.size.width - 30) / 3
+        collectionViewFlowLayout.sectionInset = .zero
+        collectionViewFlowLayout.scrollDirection = .horizontal
+        collectionViewFlowLayout.minimumInteritemSpacing = 5
+        collectionViewFlowLayout.minimumLineSpacing = 5
+        collectionViewFlowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        collectionView.bounces = false
+        
     }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 5
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 5
+//    }
+
 }
 
 extension WZSniaCell: UICollectionViewDataSource {
@@ -78,13 +89,6 @@ extension WZSniaCell: UICollectionViewDataSource {
     }
     
     
-}
-
-extension WZMeCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (SCREEN_WIDTH - 60) / 3 - 20;
-        return CGSize(width: itemWidth, height: itemWidth)
-    }
 }
 
 extension WZSniaCell: UICollectionViewDelegate {
