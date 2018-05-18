@@ -29,6 +29,14 @@ class WZSniaViewController: UIViewController {
         }
     
     }
+    
+    private func getCellIdentifier(dict : [String:Any]) -> String {
+        if dict["retweeted_status"] != nil {
+            return "transmitCell"
+        } else {
+            return "sinacell"
+        }
+    }
 
 }
 
@@ -39,7 +47,8 @@ extension WZSniaViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sinacell") as? WZSniaCell
+        let identifier = getCellIdentifier(dict: sourceDataArray![indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? WZSniaCell
         cell?.dict = sourceDataArray?[indexPath.row]
         cell?.currentIndex = indexPath.row
 //        cell?.initWithClosure { (index) in
