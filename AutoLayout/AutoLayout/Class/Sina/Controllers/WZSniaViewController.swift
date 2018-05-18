@@ -17,6 +17,9 @@ class WZSniaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let FPSLabel = V2FPSLabel(frame: CGRect(x: 100, y: 100, width: 50, height: 30))
+        self.view!.addSubview(FPSLabel)
+        
         BYNetRequest.shared.loadSinaListData(url: "https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00Eom_JGOoOLfD0e6f0eb7dbrGYIpD&count=10&page=1", successBlock: { (dict) in
             if let dataArray = dict["statuses"] {
                 self.sourceDataArray = (dataArray as! [[String: Any]])

@@ -13,6 +13,9 @@ class WZSniaCell: UITableViewCell,UICollectionViewDelegateFlowLayout {
 
     private var itemWidth: CGFloat!
     typealias reloadCellClosure = (_ index: NSInteger) -> ()
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
@@ -25,6 +28,13 @@ class WZSniaCell: UITableViewCell,UICollectionViewDelegateFlowLayout {
     public var dict: [String:Any]! {
         didSet {
             descLabel.text = dict!["text"] as? String
+            if let icon = dict!["user"] as? [String:Any] {
+                iconImage.kf.setImage(with: URL(string: icon["avatar_large"]! as! String))
+            }
+            if let name = dict!["user"] as? [String:Any] {
+                nameLabel.text = name["name"] as? String
+            }
+            timeLabel.text = (dict["created_at"] as! String)
             if let isTransmit = dict!["retweeted_status"] as? [String:Any] {
                 transmitDescLabel.text = isTransmit["text"] as? String
                 setImages(imageArray: isTransmit["pic_urls"] as! [[String : String]])
@@ -59,12 +69,11 @@ class WZSniaCell: UITableViewCell,UICollectionViewDelegateFlowLayout {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        itemWidth = (SCREEN_WIDTH - 50) / 3
+        itemWidth = (SCREEN_WIDTH - 35) / 3
         collectionViewFlowLayout.sectionInset = .zero
         collectionViewFlowLayout.scrollDirection = .vertical
         collectionViewFlowLayout.minimumInteritemSpacing = 5
         collectionViewFlowLayout.minimumLineSpacing = 5
-        collectionViewFlowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         collectionView.bounces = false
         
     }
@@ -76,19 +85,22 @@ class WZSniaCell: UITableViewCell,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
 
 }
 
 extension WZSniaCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return (imagesArray?.count)!
-        return 1
+        return (imagesArray?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionCell", for: indexPath) as! WZImageCollectionViewCell
-//        cell.dict = imagesArray![indexPath.row]
+        cell.dict = imagesArray![indexPath.row]
         cell.currentIndex = indexPath.row
         cell.backgroundColor = UIColor.red
         return cell
