@@ -37,7 +37,6 @@
 		B452F0FF20AC1748004C2384 /* UITableViewCell+WebVideoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B452F0F020AC1748004C2384 /* UITableViewCell+WebVideoCache.m */; };
 		B452F10020AC1748004C2384 /* JPVideoPlayerCachePath.m in Sources */ = {isa = PBXBuildFile; fileRef = B452F0F120AC1748004C2384 /* JPVideoPlayerCachePath.m */; };
 		B452F10120AC1748004C2384 /* JPResourceLoadingRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B452F0F220AC1748004C2384 /* JPResourceLoadingRequestTask.m */; };
-		B452F10620AC18A9004C2384 /* WZVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452F10520AC18A9004C2384 /* WZVideoViewController.swift */; };
 		B452F10920AC18BB004C2384 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B452F10820AC18BB004C2384 /* Video.storyboard */; };
 		B452F10B20AC192B004C2384 /* WZVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452F10A20AC192B004C2384 /* WZVideoView.swift */; };
 		B471496E20A962E600FDD601 /* V2FPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471496D20A962E600FDD601 /* V2FPSLabel.swift */; };
@@ -50,6 +49,9 @@
 		B48E3E6E20A56550009EBB16 /* WZListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6D20A56550009EBB16 /* WZListViewController.swift */; };
 		B48E3E7020A5655A009EBB16 /* WZMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E6F20A5655A009EBB16 /* WZMeViewController.swift */; };
 		B48E3E7420A57A12009EBB16 /* WZMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E3E7320A57A12009EBB16 /* WZMeCell.swift */; };
+		B495A93120B2B91B006076EB /* WZVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495A93020B2B91B006076EB /* WZVideoController.swift */; };
+		B495A93320B2B9F2006076EB /* WZVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495A93220B2B9F2006076EB /* WZVideoCell.swift */; };
+		B495A93620B2C073006076EB /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = B495A93520B2C073006076EB /* WZVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,7 +106,6 @@
 		B452F0F020AC1748004C2384 /* UITableViewCell+WebVideoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+WebVideoCache.m"; sourceTree = "<group>"; };
 		B452F0F120AC1748004C2384 /* JPVideoPlayerCachePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPVideoPlayerCachePath.m; sourceTree = "<group>"; };
 		B452F0F220AC1748004C2384 /* JPResourceLoadingRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPResourceLoadingRequestTask.m; sourceTree = "<group>"; };
-		B452F10520AC18A9004C2384 /* WZVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZVideoViewController.swift; sourceTree = "<group>"; };
 		B452F10820AC18BB004C2384 /* Video.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		B452F10A20AC192B004C2384 /* WZVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZVideoView.swift; sourceTree = "<group>"; };
 		B471496D20A962E600FDD601 /* V2FPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2FPSLabel.swift; sourceTree = "<group>"; };
@@ -117,6 +118,10 @@
 		B48E3E6D20A56550009EBB16 /* WZListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZListViewController.swift; sourceTree = "<group>"; };
 		B48E3E6F20A5655A009EBB16 /* WZMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZMeViewController.swift; sourceTree = "<group>"; };
 		B48E3E7320A57A12009EBB16 /* WZMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZMeCell.swift; sourceTree = "<group>"; };
+		B495A93020B2B91B006076EB /* WZVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZVideoController.swift; sourceTree = "<group>"; };
+		B495A93220B2B9F2006076EB /* WZVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZVideoCell.swift; sourceTree = "<group>"; };
+		B495A93420B2C073006076EB /* WZVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZVideo.h; sourceTree = "<group>"; };
+		B495A93520B2C073006076EB /* WZVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +216,8 @@
 		B4390DC520A55F4500E11123 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B495A93420B2C073006076EB /* WZVideo.h */,
+				B495A93520B2C073006076EB /* WZVideo.m */,
 				B452F0D320AC1748004C2384 /* JPVideoPlayer */,
 				B471496D20A962E600FDD601 /* V2FPSLabel.swift */,
 				B4390DC720A55F6800E11123 /* BYLoadingTool.swift */,
@@ -275,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				B452F10A20AC192B004C2384 /* WZVideoView.swift */,
+				B495A93220B2B9F2006076EB /* WZVideoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,8 +290,8 @@
 		B452F10420AC1893004C2384 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B452F10520AC18A9004C2384 /* WZVideoViewController.swift */,
 				B452F10820AC18BB004C2384 /* Video.storyboard */,
+				B495A93020B2B91B006076EB /* WZVideoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -487,14 +495,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B495A93620B2C073006076EB /* WZVideo.m in Sources */,
 				B471497C20A9879C00FDD601 /* WZSniaViewController.swift in Sources */,
 				B452F0FB20AC1748004C2384 /* UITableView+WebVideoCache.m in Sources */,
 				B452F0F420AC1748004C2384 /* JPVideoPlayerCache.m in Sources */,
 				B452F10B20AC192B004C2384 /* WZVideoView.swift in Sources */,
+				B495A93320B2B9F2006076EB /* WZVideoCell.swift in Sources */,
 				B471496E20A962E600FDD601 /* V2FPSLabel.swift in Sources */,
 				B452F0FD20AC1748004C2384 /* JPVideoPlayer.m in Sources */,
 				B4390DCB20A55F6900E11123 /* BYLoadingTool.swift in Sources */,
-				B452F10620AC18A9004C2384 /* WZVideoViewController.swift in Sources */,
 				B4390DCA20A55F6900E11123 /* BYNetRequest.swift in Sources */,
 				B452F0F520AC1748004C2384 /* UIView+WebVideoCache.m in Sources */,
 				B48E3E7420A57A12009EBB16 /* WZMeCell.swift in Sources */,
@@ -518,6 +527,7 @@
 				B471497A20A9852400FDD601 /* AddStroyboardProperty.swift in Sources */,
 				B452F0F920AC1748004C2384 /* JPVideoPlayerControlViews.m in Sources */,
 				B427032720A586260052C5A8 /* WZAutoImageSizeViewController.swift in Sources */,
+				B495A93120B2B91B006076EB /* WZVideoController.swift in Sources */,
 				B48E3E6C20A564F0009EBB16 /* WZNavigationController.swift in Sources */,
 				B471497F20A987D000FDD601 /* WZSniaCell.swift in Sources */,
 				B4390DCD20A55F6900E11123 /* Common.swift in Sources */,
