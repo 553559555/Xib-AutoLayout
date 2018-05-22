@@ -19,6 +19,19 @@
 
 @implementation WZVideo
 
+- (void)setUrl:(NSString *)url {
+    NSURL *urlPath = nil;
+    if ([url rangeOfString:@"http"].location != NSNotFound) {
+        urlPath = [NSURL URLWithString:url];
+    } else {
+        urlPath = [NSURL fileURLWithPath:url];
+    }
+    //创建AVPlayerItem
+    _playerItem = [AVPlayerItem playerItemWithURL:urlPath];
+    //添加给AVPlayer
+    self.player = [AVPlayer playerWithPlayerItem:_playerItem];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame andURL:(NSString *)url {
     if (self = [super initWithFrame:frame]) {
         NSURL *urlPath = nil;
@@ -63,7 +76,8 @@
     AVPlayerItem *playerItem = (AVPlayerItem *)object;
     //当前缓冲进度
     if ([keyPath isEqualToString:@"loadedTimeRanges"]){
-        
+        NSLog(@"%lld", playerItem.duration.value);
+        NSLog(@"%d", playerItem.duration.timescale);
     //视频加载进度
     }else if ([keyPath isEqualToString:@"status"]){
         //视频加载完成
