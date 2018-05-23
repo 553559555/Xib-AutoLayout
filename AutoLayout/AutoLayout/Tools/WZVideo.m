@@ -19,19 +19,6 @@
 
 @implementation WZVideo
 
-- (void)setUrl:(NSString *)url {
-    NSURL *urlPath = nil;
-    if ([url rangeOfString:@"http"].location != NSNotFound) {
-        urlPath = [NSURL URLWithString:url];
-    } else {
-        urlPath = [NSURL fileURLWithPath:url];
-    }
-    //创建AVPlayerItem
-    _playerItem = [AVPlayerItem playerItemWithURL:urlPath];
-    //添加给AVPlayer
-    self.player = [AVPlayer playerWithPlayerItem:_playerItem];
-}
-
 - (instancetype)initWithFrame:(CGRect)frame andURL:(NSString *)url {
     if (self = [super initWithFrame:frame]) {
         NSURL *urlPath = nil;

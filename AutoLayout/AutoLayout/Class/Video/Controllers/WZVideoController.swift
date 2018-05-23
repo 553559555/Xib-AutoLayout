@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WZVideoController: UIViewController,UIScrollViewDelegate,JPVideoPlayerDelegate {
+class WZVideoController: UIViewController,UIScrollViewDelegate {
     
     private let videoArray: [String] = [
         "http://p11s9kqxf.bkt.clouddn.com/coder.mp4",
@@ -40,6 +40,7 @@ class WZVideoController: UIViewController,UIScrollViewDelegate,JPVideoPlayerDele
     private var bottomImageView: UIImageView!
     private var currentVideoIndex: NSInteger!
     private var scrollViewOffserYOnStartDrag: CGFloat!
+    private var playerVideo: WZPlaySingleVideo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +65,6 @@ class WZVideoController: UIViewController,UIScrollViewDelegate,JPVideoPlayerDele
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.middleImageView.jp_stopPlay()
     }
     
     /*
@@ -85,33 +85,39 @@ class WZVideoController: UIViewController,UIScrollViewDelegate,JPVideoPlayerDele
         scrollViewOffserYOnStartDrag = scrollView.contentOffset.y
     }
     
-    func shouldShowBlackBackgroundBeforePlaybackStart() -> Bool {
-        return true
-    }
+//    func shouldShowBlackBackgroundBeforePlaybackStart() -> Bool {
+//        return true
+//    }
     
     
     
     private func scrollViewDidEndScrolling() {
-        
+        var tempOperator = ""
         if scrollViewOffserYOnStartDrag == scrollView.contentOffset.y {
             return
+        } else if scrollViewOffserYOnStartDrag < scrollView.contentOffset.y {
+            tempOperator = "+"
+        } else if scrollViewOffserYOnStartDrag > scrollView.contentOffset.y {
+            tempOperator = "-"
         }
         
         scrollView.setContentOffset(CGPoint(x: 0, y: SCREEN_HEIGHT), animated: false)
-        middleImageView.jp_stopPlay()
-        middleImageView.jp_playVideo(with: self.fetchURL(), bufferingIndicator: nil, controlView: nil, progressView: JPDouyuProgressView()) { (view, model) in
-            view.jp_muted = false
-        }
+        playerVideo.url = self.fetchURL(tempOperator)
         
     }
     
-    private func fetchURL() -> URL {
-        if currentVideoIndex == videoArray.count - 1 {
+    private func fetchURL(_ operatorStr: String) -> String {
+        if currentVideoIndex == videoArray.count - 1 && operatorStr == "+" {
             self.currentVideoIndex = 0
+        } else if currentVideoIndex == 0 && operatorStr == "-" {
+            self.currentVideoIndex = videoArray.count - 1
+        } else if operatorStr == "+" {
+            currentVideoIndex = currentVideoIndex + 1
+        } else if operatorStr == "-" {
+            currentVideoIndex = currentVideoIndex - 1
         }
-        let url = URL(string: videoArray[currentVideoIndex])
-        currentVideoIndex = currentVideoIndex + 1
-        return url!
+        print(self.currentVideoIndex)
+        return videoArray[currentVideoIndex]
     }
 
     private func setup() {
@@ -120,44 +126,31 @@ class WZVideoController: UIViewController,UIScrollViewDelegate,JPVideoPlayerDele
         
         scrollView = UIScrollView(frame: view.bounds)
         scrollView.backgroundColor = UIColor.black
-        scrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: SCREEN_HEIGHT * 3)
+        scrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: (SCREEN_HEIGHT - NAVIGATION_HEIGHT) * 3)
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         view.addSubview(scrollView)
         
-        topImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        topImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAVIGATION_HEIGHT))
         topImageView.backgroundColor = UIColor.black
-        topImageView.isUserInteractionEnabled = true
+//        topImageView.isUserInteractionEnabled = true
         scrollView.addSubview(topImageView)
         
-        middleImageView = UIImageView(frame: CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        middleImageView = UIImageView(frame: CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAVIGATION_HEIGHT))
         middleImageView.backgroundColor = UIColor.black
-        middleImageView.isUserInteractionEnabled = true
-        middleImageView.jp_videoPlayerDelegate = self
+//        middleImageView.isUserInteractionEnabled = true
         scrollView.addSubview(middleImageView)
         
-        bottomImageView = UIImageView(frame: CGRect(x: 0, y: SCREEN_HEIGHT * 2, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        bottomImageView = UIImageView(frame: CGRect(x: 0, y: SCREEN_HEIGHT * 2, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAVIGATION_HEIGHT))
         bottomImageView.backgroundColor = UIColor.black
-        bottomImageView.isUserInteractionEnabled = true
+//        bottomImageView.isUserInteractionEnabled = true
         scrollView.addSubview(bottomImageView)
         
+        playerVideo = WZPlaySingleVideo(frame: middleImageView.bounds, url: "")
+        middleImageView.addSubview(playerVideo)
         
     }
 
-}
-
-class JPDouyuProgressView: JPVideoPlayerProgressView {
-    
-    override func layoutThatFits(_ constrainedRect: CGRect, nearestViewControllerInViewTree nearestViewController: UIViewController?, interfaceOrientation: JPVideoPlayViewInterfaceOrientation) {
-        super.layoutThatFits(constrainedRect, nearestViewControllerInViewTree: nearestViewController, interfaceOrientation: interfaceOrientation)
-        
-        self.trackProgressView.frame = CGRect(x: 0, y: constrainedRect.size.height - JPVideoPlayerProgressViewElementHeight - (nearestViewController?.tabBarController?.tabBar.bounds.size.height)!, width: constrainedRect.size.width, height: JPVideoPlayerProgressViewElementHeight)
-        
-        self.cachedProgressView.frame = self.trackProgressView.bounds
-        self.elapsedProgressView.frame = self.trackProgressView.frame
-        
-    }
-    
 }

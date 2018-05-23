@@ -10,8 +10,6 @@
 
 @interface WZVideo : UIView
 
-@property (nonatomic, copy) NSString *url;
-
 - (instancetype)initWithFrame:(CGRect)frame andURL:(NSString *)url;
 - (void)stopVideo;
 
